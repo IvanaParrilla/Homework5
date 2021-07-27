@@ -2,12 +2,14 @@
 {% block content %}
 
 <div class="card" class="m-5 p-2">
+    <h5 class="card-title"> Oscar Age Female: {{ id.Name }}</h5>
+
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: {{ city.id }}</li>
-        <li class="list-group-item">Year: {{ city.year }}</li>
-        <li class="list-group-item">Age: {{ city.age }}</li>
-        <li class="list-group-item">Name: {{ city.name }}</li>
-        <li class="list-group-item">Movie: {{ city.movie }}</li>
+        <li class="list-group-item">ID: {{ id.id }}</li>
+        <li class="list-group-item">Year: {{ id.year }}</li>
+        <li class="list-group-item">Age: {{ id.age }}</li>
+        <li class="list-group-item">Name: {{ id.name }}</li>
+        <li class="list-group-item">Movie: {{ id.movie }}</li>
     </ul>
     <div class="card-body">
         <a href="/edit/{{name.id}}" class="card-link btn btn-primary">edit</a>

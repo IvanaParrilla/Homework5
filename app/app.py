@@ -64,7 +64,7 @@ def form_insert_post():
     inputData = (request.form.get('id'), request.form.get('year'), request.form.get('age'),
                  request.form.get('name'), request.form.get('movie'))
     sql_insert_query = """INSERT INTO oscar_age_female (id,`year`,age,`name`,movie) VALUES (%s, %s,%s, %s,%s) """
-    cursor.execute(sql_insert_query, inputData
+    cursor.execute(sql_insert_query, inputData)
     mysql.get_db().commit()
     return redirect("/", code=302)
 

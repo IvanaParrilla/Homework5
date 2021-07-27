@@ -1,6 +1,5 @@
-  CREATE DATABASE oscarData;
+CREATE DATABASE oscarData;
 use oscarData;
-
 
 CREATE TABLE IF NOT EXISTS oscar_age_female (
     `Index` INT,

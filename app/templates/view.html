@@ -1,19 +1,19 @@
-
 {% extends "layout.html" %}
 {% block content %}
 
 <div class="card" class="m-5 p-2">
-    <h5 class="card-title"> 2012 MLB Team: {{ team.Team }}</h5>
-
     <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Payroll: {{ team.Payroll_millions }}</li>
-        <li class="list-group-item"> Total Wins: {{ team.Wins }}</li>
+        <li class="list-group-item">ID: {{ name.id }}</li>
+        <li class="list-group-item">Year: {{ name.year }}</li>
+        <li class="list-group-item">Age: {{ name.age }}</li>
+        <li class="list-group-item">Name: {{ name.name }}</li>
+        <li class="list-group-item">Movie: {{ name.movie }}</li>
     </ul>
     <div class="card-body">
-        <a href="/edit/{{team.id}}" class="card-link btn btn-primary">edit</a>
+        <a href="/edit/{{name.id}}" class="card-link btn btn-primary">edit</a>
     </div>
 </div>
-<form action="/delete/{{team.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+        <form action="/delete/{{name.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
 
 
 {% endblock %}

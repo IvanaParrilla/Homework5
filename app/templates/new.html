@@ -1,21 +1,36 @@
 {% extends "layout.html" %}
 {% block content %}
-
-<div class="card" class="m-5 p-2">
-    <h5 class="card-title"> Oscar Age Female: {{ id.Name }}</h5>
-
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: {{ id.id }}</li>
-        <li class="list-group-item">Year: {{ id.year }}</li>
-        <li class="list-group-item">Age: {{ id.age }}</li>
-        <li class="list-group-item">Name: {{ id.name }}</li>
-        <li class="list-group-item">Movie: {{ id.movie }}</li>
-    </ul>
-    <div class="card-body">
-        <a href="/edit/{{name.id}}" class="card-link btn btn-primary">edit</a>
+<form action="/cities/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="id">ID</label>
+            <input id="id" type="text" class="form-control" placeholder="Oscar Id" name="id">
+        </div>
     </div>
-</div>
-        <form action="/delete/{{name.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
 
+    <div class="row">
+        <div class="col">
+            <label for="year">Year Awarded</label>
+            <input id="year" type="text" class="form-control" placeholder="Year Awarded" name="year">
+        </div>
+        <div class="col">
+            <label for="age">Age Awarded</label>
+            <input id="age" type="text" class="form-control" placeholder="Age Awarded" name="age">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="name">Name of Artist</label>
+            <input id="name" type="text" class="form-control" placeholder="Name of Artist"
+                   name="name">
+        </div>
+        <div class="col">
+            <label for="movie">Name of the Movies</label>
+            <input id="movie" type="text" class="form-control" placeholder="Name of the Movie" name="movie">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Success</button>
+
+</form>
 
 {% endblock %}

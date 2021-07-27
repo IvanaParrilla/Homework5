@@ -12,16 +12,7 @@
     </tr>
     </thead>
     <tbody>
-    {% for city in cities %}
-    <tr>
-        <td>{{ city.id }}</a></td>
-        <td>{{ city.year }}</td>
-        <td>{{ city.age }}</td>
-        <td>{{ city.name }}</td>
-        <td>{{ city.movie }}</td>
-        <td>
-            <a href="/view/{{city.id}}" class="card-link btn btn-primary">View</a>
-            <a href="/edit/{{city.id}}" class="card-link btn btn-warning">Edit</a>
+    {% for name in names %}
         </td>
     </tr>
     {% endfor %}

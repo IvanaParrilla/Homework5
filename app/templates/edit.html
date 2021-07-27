@@ -1,22 +1,22 @@
 
 {% extends "layout.html" %}
 {% block content %}
-<form action="/edit/{{city.id}}" method="post">
+<form action="/edit/{{name.id}}" method="post">
     <div class="row">
         <div class="col">
-            <label>Id: {{city.id}}</label>
+            <label>Id: {{name.id}}</label>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <label for="year">Year Awarded</label>
             <input id="year" type="text" class="form-control" placeholder="Year"
-                   name="year" value="{{city.year}}">
+                   name="year" value="{{id.year}}">
         </div>
         <div class="col">
             <label for="age">Age of the Artist</label>
             <input id="age" type="text" class="form-control" placeholder="Age" name="age"
-                   value="{{city.age}}">
+                   value="{{id.age}}">
         </div>
     </div>
 
@@ -24,12 +24,12 @@
         <div class="col">
             <label for="name">Name of Artist</label>
             <input id="name" type="text" class="form-control" placeholder="Name" name="name"
-                   value="{{city.name}}">
+                   value="{{id.name}}">
         </div>
         <div class="col">
             <label for="movie">Name of the Movie</label>
             <input id="movie" type="text" class="form-control" placeholder="Movie" name="movie"
-                   value="{{city.movie}}">
+                   value="{{id.movie}}">
         </div>
     </div>
     <button type="submit" class="btn btn-success">Save</button>
